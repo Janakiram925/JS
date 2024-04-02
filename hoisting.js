@@ -9,19 +9,19 @@ for(var i=0; i<=5; i++) {
     }, 1000)
 }
 
-function x() {
-    for (var i = 0; i < 5; i++) {
-        function print(value) {
-            console.log(`print called with value ${value}`)
-            setTimeout(() => {
-                console.log(value);
-            }, i*1000)
-        }
-        print(i);
-        console.log(`outside i ${i}`)
-    }
-}
-x();
+// function x() {
+//     for (var i = 0; i < 5; i++) {
+//         function print(value) {
+//             console.log(`print called with value ${value}`)
+//             setTimeout(() => {
+//                 console.log(value);
+//             }, i*1000)
+//         }
+//         print(i);
+//         console.log(`outside i ${i}`)
+//     }
+// }
+// x();
 
 // let j;
 // for(j =0; j<2; j++) {
@@ -44,3 +44,15 @@ x();
 //     printName(); // Janakiram
 //   }
 //   myFunction();
+
+var name = 'Ram';
+let firstName = 'JanakiRam';
+const lastName = 'Vundavalli';
+function hello() {
+    console.log(firstName, window);
+}
+
+console.log(this.name); // Ram 
+console.log(this.firstName);  // undefined
+console.log(this.lastName); // undefined
+hello()
